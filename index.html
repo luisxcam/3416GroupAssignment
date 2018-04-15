@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Available Products',     11],
+          ['Used Products',    7]
+        ]);
+
+        var options = {
+          title: 'Stock Details',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+
+<body>
+	<div class="bg-div">
+		<a href="index.html"><img class="logo-img" src="images/logo.svg" alt="amazon" align="left" width="200px"></a>
+		<nav>
+			<ul>
+			  <li><a href="index.html">Home</a></li>
+			  <li><a href="add-products.html">Add Products</a></li>
+			  <li><a href="search-products.html">Search Products</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="hero-image">
+	  <div class="hero-text">
+	    <h1>Shop Millions of Products‎</h1>
+	    <p>Online shopping in Canada - books, electronics, Kindle...</p>
+	    <button>Search Products</button>
+	  </div>
+	</div>
+
+	<div id="donutchart" style="width: 100%; height: 75%;"></div>
+
+	<footer>
+		<div><img class="logo-footer" src="images/logo.svg" alt="Brandgizer" width="150px"></div>
+		<div>
+			<ul>
+			  <li><a href="#home">Legal</a></li>
+			  <li><a href="#add-products">Privacy Policy</a></li>
+			  <li><a href="#search-products">Terms of Uses</a></li>
+			</ul>
+		<div>© Copyright 2018 Brandgizer.com</div>
+		</div>
+	</footer>
+</body>
+</html>
+
+
