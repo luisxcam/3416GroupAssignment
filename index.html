@@ -2,7 +2,6 @@
 <html ng-app='mainApp'>
 <head>
 	<meta name='viewport' content='width=device-width, initial-scale=1' charset="utf-8">
-    <base href="#/">
 	<link rel='stylesheet' type='text/css' href='css/style.css'>
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet'>
 </head>
@@ -11,10 +10,10 @@
 <body>
 	<!-- Navigation -->
 	<div class='bg-div'>
-		<a href='#/'><img class='logo-img' src='images/logo.svg' alt='amazon' align='left' width='200px'></a>
+		<img class='logo-img' src='images/logo.svg' alt='amazon' align='left' width='200px'>
 		<nav>
 			<ul>
-				<li><a href='#'>Home</a></li>
+				<li><a href='#/'>Home</a></li>
 				<li ng-class="{active: isActive('Addproducts')}"><a href='#/addproducts/'>Add Products</a></li>
 				<li ng-class="{active: isActive('Searchproducts')}"><a href='#/searchproducts/'>Search Products</a></li>
 			</ul>

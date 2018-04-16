@@ -16,7 +16,7 @@
                 css: 'css/style.css'
             });
             $routeProvider.when('/searchproducts/', {
-                controller: 'searchProduct',
+                controller: 'searchProductCtrl',
                 templateUrl: 'modals/searchproducts.html',
                 access: {
                     restricted: true
@@ -48,11 +48,11 @@
         });
     }
 
-    function AddProductCtrl() {
+    function AddProductCtrl(ApiRequestsService, $scope) {
         console.log('add product loaded');
     }
 
-    function SearchProductCtrl() {
+    function SearchProductCtrl(ApiRequestsService, $scope) {
         console.log('search for product');
     }
 
