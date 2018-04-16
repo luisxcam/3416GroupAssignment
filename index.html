@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
 </head>
 
-<body>
+<body ng-app='mainApp'>
 	<div class="bg-div">
 		<a href="index.html">
 			<img class="logo-img" src="images/logo.svg" alt="amazon" align="left" width="200px">
@@ -29,6 +29,7 @@
 
 	<div class="hero-image">
 		<div class="hero-text">
+			{{angularworking}}
 			<h1>Shop Millions of Products‎</h1>
 			<p>Online shopping in Canada - books, electronics, Kindle...</p>
 			<button>Search Products</button>
@@ -58,6 +59,7 @@
 	</footer>
 
 	<!-- JS -->
+	<script src="js/lib/angular.js"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script type="text/javascript" src='js/app.js'></script>
 </body>
