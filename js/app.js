@@ -2,23 +2,26 @@
 
 (function () {
     angular.module('mainApp', ['appControllers', 'ngRoute'])
-        //.controller('mainCtrl', MainCtrl)
         .config(function ($routeProvider, $locationProvider) {
             $locationProvider.hashPrefix('');
 
             $routeProvider.when('/addproducts/', {
                 controller: 'addProductCtrl',
                 templateUrl: 'modals/addproducts.html',
-                access: {restricted: true}
+                access: {restricted: true},
+                css:'css/style.css'
             });
             $routeProvider.when('/searchproducts/', {
+                controller: 'searchProduct',
                 templateUrl: 'modals/searchproducts.html',
-                access: {restricted: true}
+                access: {restricted: true},
+                css:'css/style.css'
             });
             $routeProvider.otherwise({
                 controller: 'pieCtrl',
                 templateUrl: 'modals/piechart.html',
-                access: {restricted: true}
+                access: {restricted: true},
+                css:'css/style.css'
             });
 
         });
@@ -27,17 +30,22 @@
         .controller('pieCtrl', PieCtrl)
         .controller('addProductCtrl', AddProductCtrl);
 
-    //Controllers
-    // function MainCtrl($scope) {
-    //     console.log('controller loaded');
-    // }
+    function PieCtrl($scope,$http) {
+        $scope.getRequest = function(){
+            $http.get('https://api.github.com/users/luisxcam').then(function(response){
+                console.log(response.data);
+            });
+        }
 
-    function PieCtrl() {
-        console.log('pie loaded');
+        $scope.getRequest();
     }
 
     function AddProductCtrl() {
         console.log('add product loaded');
+    }
+
+    function SearchProduct(){
+        console.log('search for product');
     }
 })();
 
