@@ -1,6 +1,7 @@
 'use strict';
 
 (function () {
+    //Angular Modules Angular Modules Angular Modules Angular Modules Angular Modules Angular Modules Angular Modules Angular Modules Angular Modules 
     angular.module('mainApp', ['appControllers', 'ngRoute'])
         .service('ApiRequestsService', ApiRequestsService)
         .config(function ($routeProvider, $locationProvider) {
@@ -33,11 +34,13 @@
 
         });
 
+    //Controller Declaration Controller Declaration Controller Declaration Controller Declaration Controller Declaration Controller Declaration 
     angular.module('appControllers', [])
         .controller('pieCtrl', PieCtrl)
-        .controller('addProductCtrl', AddProductCtrl);
+        .controller('addProductCtrl', AddProductCtrl)
+        .controller('searchProductCtrl',SearchProductCtrl);
 
-
+    //Controllers Controllers Controllers Controllers Controllers Controllers Controllers Controllers Controllers Controllers Controllers Controllers 
     function PieCtrl(ApiRequestsService, $scope) {
         console.log('calling example');
         var requestPromise = ApiRequestsService.example().then(function(data){
@@ -49,10 +52,11 @@
         console.log('add product loaded');
     }
 
-    function SearchProduct() {
+    function SearchProductCtrl() {
         console.log('search for product');
     }
 
+    //API Request Service API Request Service API Request Service API Request Service API Request Service API Request Service API Request Service 
     function ApiRequestsService($http) {
         var that = this;
 
