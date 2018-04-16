@@ -40,7 +40,9 @@
 
     function PieCtrl(ApiRequestsService, $scope) {
         console.log('calling example');
-        ApiRequestsService.example();
+        var requestPromise = ApiRequestsService.example().then(function(data){
+            console.log(data);
+        });
     }
 
     function AddProductCtrl() {
@@ -55,8 +57,9 @@
         var that = this;
 
         that.example = function () {
-            $http.get('https://api.github.com/users/luisxcam').then(function (response) {
-                console.log(response.data);
+            return $http.get('https://api.github.com/users/luisxcam').then(function (response) {
+                console.log('request finished');
+                return response.data;
             });
         }
     }
