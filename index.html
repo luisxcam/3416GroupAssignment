@@ -7,15 +7,16 @@
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet'>
 </head>
 
-<body ng-controller='mainCtrl'>
+<!-- <body ng-controller='mainCtrl'> -->
+<body>
 	<!-- Navigation -->
 	<div class='bg-div'>
-		<a href='#'><img class='logo-img' src='images/logo.svg' alt='amazon' align='left' width='200px'></a>
+		<a href='#/'><img class='logo-img' src='images/logo.svg' alt='amazon' align='left' width='200px'></a>
 		<nav>
 			<ul>
 				<li><a href='#'>Home</a></li>
-				<li ng-class="{active: isActive('Addproducts')}"><a href='#/addproducts'>Add Products</a></li>
-				<li ng-class="{active: isActive('Searchproducts')}"><a href='#/searchproducts'>Search Products</a></li>
+				<li ng-class="{active: isActive('Addproducts')}"><a href='#/addproducts/'>Add Products</a></li>
+				<li ng-class="{active: isActive('Searchproducts')}"><a href='#/searchproducts/'>Search Products</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -37,9 +38,9 @@
 		<div><img class='logo-footer' src='images/logo.svg' alt='Brandgizer' width='150px'></div>
 		<div>
 			<ul>
-				<li><a href='#'>Legal</a></li>
-				<li><a href='#'>Privacy Policy</a></li>
-				<li><a href='#'>Terms of Uses</a></li>
+				<li><a href='#/'>Legal</a></li>
+				<li><a href='#/'>Privacy Policy</a></li>
+				<li><a href='#/'>Terms of Uses</a></li>
 			</ul>
 			<div>© Copyright 2018 Brandgizer.com</div>
 		</div>
