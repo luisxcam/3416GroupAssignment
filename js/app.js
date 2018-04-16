@@ -18,4 +18,20 @@
 //     chart.draw(data, options);
 // }
 
-angular.module('mainApp',[]);
+angular.module('mainApp', ['ngRoute'])
+    .controller('mainCtrl', MainCtrl)
+    .config(function ($routeProvider) {
+        $routeProvider.when('/addproducts', {
+            templateUrl: 'modals/addproducts.html'
+        });
+        $routeProvider.when('/searchproducts', {
+            templateUrl: 'modals/searchproducts.html'
+        });
+        $routeProvider.otherwise({
+            templateUrl: 'modals/piechart.html'
+        });
+    });
+
+function MainCtrl($scope){
+    console.log('controller loaded');
+}
