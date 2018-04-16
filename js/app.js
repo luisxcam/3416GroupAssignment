@@ -17,10 +17,12 @@
 //     var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
 //     chart.draw(data, options);
 // }
-
+'use strict';
 angular.module('mainApp', ['ngRoute'])
     .controller('mainCtrl', MainCtrl)
-    .config(function ($routeProvider) {
+    .config(function ($routeProvider, $locationProvider) {
+        $locationProvider.hashPrefix('');
+        
         $routeProvider.when('/addproducts', {
             templateUrl: 'modals/addproducts.html'
         });
@@ -30,8 +32,9 @@ angular.module('mainApp', ['ngRoute'])
         $routeProvider.otherwise({
             templateUrl: 'modals/piechart.html'
         });
+        
     });
 
-function MainCtrl($scope){
+function MainCtrl($scope) {
     console.log('controller loaded');
 }
